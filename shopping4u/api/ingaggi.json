@@ -1,0 +1,39 @@
+{
+    "ingaggi": [
+        {
+            "NomePersonalShopper": "Monica Zamberlan",
+            "Macrocategoria prodotto": "Idee regalo",
+            "Location": "Via S.Giovanni 3, San Bonifacio (VR)"
+        },
+        {
+            "NomePersonalShopper": "Martina Girotti",
+            "Macrocategoria prodotto": "Gioielleria",
+            "Indirizzo di consegna": "Via IV Novembre 76, Bussolengo (VR)"
+        },
+        {
+            "NomePersonalShopper": "Giacomo Rizzi",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via Rosmini 56, Parona (VR)"
+        },
+        {
+            "NomePersonalShopper": "Valeria Marchi",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via XXV Aprile 30, Zevio (VR)"
+        },
+        {
+            "NomePersonalShopper": "Marco Mizzon",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via Carrari 135, Sommacampagna (VR)"
+        },
+        {
+            "NomePersonalShopper": "Greta Pilon",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via Bellavista 13, Custoza (VR)"
+        },
+        {
+            "NomePersonalShopper": "Alice Beatrici",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via Saturno 34, Santa Maria (VR)"
+        }
+    ]
+}
