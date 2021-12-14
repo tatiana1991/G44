@@ -72,22 +72,22 @@ app.listen(49146, () => {
  *               type: object
  *               properties:
  *                 data:
- *                   type: string
+ *                   type: array
  *                   items:
  *                     type: object
  *                     properties:
  *                       NomePersonalShopper:
  *                         type: string
  *                         description: The personal shopper Name.
- *                         example: Alice Dalfovo
+ *                         example: Monica Zamberlan
  *                       Macrocategoria Prodotto:
  *                         type: string
  *                         description: The category of the product.
- *                         example: Abbigliamento
+ *                         example: Idee regalo
  *                       Indirizzo di consegna:
  *                          type: string
  *                          description: The address of the client
- *                          example: Via IV Novembre 7, Trento
+ *                          example: Via S.Giovanni 3, San Bonifacio (VR)
  */
 app.get('/api/ingaggi', (request, response) => {
     var data = fs.readFileSync('ingaggi.json');
@@ -112,15 +112,15 @@ app.get('/api/ingaggi', (request, response) => {
  *               NomePersonalShopper:
  *                  type: string
  *                  description: The personal shopper Name.
- *                  example: Alice Dalfovo
+ *                  example: Monica Zamberlan
  *               Macrocategoria prodotto:
  *                  type: string
  *                  description: The category of the product.
- *                  example: Abbigliamento
+ *                  example: Idee regalo
  *               Indirizzo di consegna:
  *                  type: string
  *                  description: The address of the client
- *                  example: Via IV Novembre 7, Trento
+ *                  example: Via S.Giovanni 3, San Bonifacio (VR)
  *     responses:
  *       201:
  *         description: successful executed
