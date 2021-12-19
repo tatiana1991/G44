@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Shopping 4U</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/personal_shopper">Personal Shoppers</a>
+        </li>
+    </ul>
+</nav>
+
+<h1 style="font-size:24px;text-align:center;">Personal Shopper</h1>
+
+<% posts.forEach(post => { %>
+
+    <table class="table table-striped table-dark">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Location</th>
+                <th scope="col">Evaluation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% personalShoppers.forEach(personalShopper=> { %>
+                <tr>
+                    <td>
+                        <%= personalShopper._id %>
+                    </td>
+                    <td>
+                        <%= personalShopper.Name %>
+                    </td>
+                    <td>
+                        <%= personalShopper.Location %>
+                    </td>
+                    <td>
+                        <%= personalShopper.Evaluation %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+
+<% }) %>
+
+<p class="text-center text-muted">&copy; Copyright 2021 - Shopping 4U</p>
