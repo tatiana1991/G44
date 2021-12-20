@@ -1,0 +1,46 @@
+{
+    "form": [
+        {
+            "NomePersonalShopper": "Monica Zamberlan",
+            "Macrocategoria prodotto": "Idee regalo",
+            "Location": "Via S.Giovanni 3, San Bonifacio (VR)",
+            "Informazioni": "Vorrei un regalo per il mio ragazzo. In particolare per il suo compleanno (18)."
+        },
+        {
+            "NomePersonalShopper": "Martina Girotti",
+            "Macrocategoria prodotto": "Gioielleria",
+            "Indirizzo di consegna": "Via IV Novembre 76, Bussolengo (VR)",
+            "Informazioni": "Buongiorno, vorrei un braccialetto per mia mamma. Braccialetto d'argento, fino."
+        },
+        {
+            "NomePersonalShopper": "Giacomo Rizzi",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via Rosmini 56, Parona (VR)",
+            "Informazioni": "Alla ricerca di una felpa oversize, possibilmente di colore grigio."
+        },
+        {
+            "NomePersonalShopper": "Valeria Marchi",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via XXV Aprile 30, Zevio (VR)",
+            "Informazioni": "Vorrei un magioncino di taglia s, nera, da mettere sopra le camicie"
+        },
+        {
+            "NomePersonalShopper": "Marco Mizzon",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via Carrari 135, Sommacampagna (VR)",
+            "Informazioni": "Vorrei una camicia da mettere al lavoro. Uomo, taglia XL."
+        },
+        {
+            "NomePersonalShopper": "Greta Pilon",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via Bellavista 13, Custoza (VR)",
+            "Informazioni": "Vorrei un paio di jeans. Taglia 36, donna, possibilmente larghi."
+        },
+        {
+            "NomePersonalShopper": "Alice Beatrici",
+            "Macrocategoria prodotto": "Abbigliamente",
+            "Indirizzo di consegna": "Via Saturno 34, Santa Maria (VR)",
+            "Informazioni": "Cerco un vestito da mettere a Natale. Rosso natalizio possibilmente"
+        }
+    ]
+}
