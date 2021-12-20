@@ -1,0 +1,13 @@
+{
+    "macrocategorie": [
+        {
+            "Abbigliamento": ["Abiti", "Top", "Bottom", "Scarpe"]
+        },
+        {
+            "Idee regalo": ["Compleanno", "Laurea", "Natale", "Anniversario"]
+        },
+        {
+            "Gioielleria": ["Bracciale", "Collana",  "Anello", "Orecchini"]
+        }
+    ]
+}
