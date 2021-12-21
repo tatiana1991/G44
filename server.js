@@ -30,10 +30,23 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-  // simple route
+// simple route
+/*
 app.get("/", (req, res) => {
     res.json({ message: "Benvenuto to Shopping4U." });
   });
+*/
+app.get('/', function(req,res){
+    res.render('index.ejs');
+ });
+
+ app.get('/personal_shopper', function(req,res){
+    res.render('personal_shopper.ejs');
+ });
+
+ app.get('/ingaggi', function(req,res){
+    res.render('ingaggi.ejs');
+ });
 
 require("./app/routes/personal_shopper.routes")(app);
 
