@@ -1,7 +1,6 @@
 const Express = require("express");
 const app = Express();
 
-// modules to generate APIs documentation
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const swaggerOptions = {
@@ -34,26 +33,18 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-
-
 var fs = require('fs');
 
 var cors = require('cors')
 app.use(cors())
 
-// module to parse the API body request
 var bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
-
-
 app.listen(49146, () => {
     console.log("APIs Running");
-
-
 });
 
 
@@ -127,27 +118,20 @@ app.get('/api/ingaggi', (request, response) => {
 */
 app.post('/api/ingaggi', (request, response) => {
 
-    // lettura file json e estrazione dati
     var data = fs.readFileSync('ingaggi.json');
     var myObject = JSON.parse(data);
 
-
-    // creazione nuovo elemento da inserire da Request Parameter
     let nuovoIngaggio = {
         "NomePersonalShopper": request.body['NomePersonalShopper'],
         "Macrocategoria prodotto": request.body['Macrocategoria prodotto'],
         "Indirizzo di consegna": request.body['Indirizzo di consegna']
     };
 
-    //aggiunta nuovo elemento
     myObject.ingaggi.push(nuovoIngaggio);
 
-    //aggiornamento file json con il nuovo elemento
     var newData = JSON.stringify(myObject);
     fs.writeFile('ingaggi.json', newData, err => {
-        // error checking
         if (err) throw err;
-
     });
 
     response.json("Ingaggio Inserito Correttamente: (" + myObject.ingaggi.length + ")");
@@ -173,11 +157,10 @@ app.post('/api/ingaggi', (request, response) => {
  *                     type: object
  *                     properties:
  *                       Abbigliamento: 
- *                         type: array
+ *                         type: string
  *                         description: Product category.
  *                         example: abiti, top, bottom, scarpe
  */
-
 app.get('/api/macrocategorie', (request, response) => {
     var data = fs.readFileSync('macrocategorie.json');
     var myObject = JSON.parse(data);
@@ -185,8 +168,6 @@ app.get('/api/macrocategorie', (request, response) => {
     response.send(myObject);
 
 })
-
-
 
 /**
  * @swagger
@@ -208,9 +189,9 @@ app.get('/api/macrocategorie', (request, response) => {
  *                     type: object
  *                     properties:
  *                       Recensione: 
- *                 type: array
- *                 description: Opinion about the work of the personal shopper
- *                 example: Il personal shopper ha fatto una lavoro eccelente. I prodotti acquistati sono perfettamente adatti ai miei gusti personali
+ *                         type: string
+ *                         description: Opinion about the work of the personal shopper
+ *                         example: Il personal shopper ha fatto una lavoro eccelente. I prodotti acquistati sono perfettamente adatti ai miei gusti personali
  */
  app.get('/api/recensione', (request, response) => {
     var data = fs.readFileSync('recensione.json');
@@ -233,7 +214,7 @@ app.get('/api/macrocategorie', (request, response) => {
  *             type: object
  *             properties:
  *               Recensione: 
- *                 type: array
+ *                 type: string
  *                 description: Opinion about the work of the personal shopper
  *                 example: Il personal shopper ha fatto una lavoro eccelente. I prodotti acquistati sono perfettamente adatti ai miei gusti personali
  *               
@@ -241,28 +222,20 @@ app.get('/api/macrocategorie', (request, response) => {
  *       201:
  *         description: successful executed
 */
-
 app.post('/api/recensione', (request, response) => {
 
-    // lettura file json e estrazione dati
     var data = fs.readFileSync('recensione.json');
     var myObject = JSON.parse(data);
 
-
-    // creazione nuovo elemento da inserire da Request Parameter
     let nuovaRecensione = {
         "Recensione": request.body['Recensione']
     };
 
-    //aggiunta nuovo elemento
     myObject.recensione.push(nuovaRecensione);
 
-    //aggiornamento file json con il nuovo elemento
     var newData = JSON.stringify(myObject);
     fs.writeFile('recensione.json', newData, err => {
-        // error checking
         if (err) throw err;
-
     });
 
     response.json("Recensione Inserita Correttamente: (" + myObject.recensione.length + ")");
@@ -272,11 +245,11 @@ app.post('/api/recensione', (request, response) => {
  * @swagger
  * /api/form:
  *   get:
- *     summary: Retrieve a list of requests (including the form).
- *     description: Retrieve a list of requests (with details) from the Server.
+ *     summary: Retrieve a list of requests with details.
+ *     description: Retrieve a list of requests with details from the Server.
  *     responses:
  *       200:
- *         description: A list of requests (with specifications).
+ *         description: A list of requests with details.
  *         content:
  *           application/json:
  *             schema:
@@ -317,7 +290,7 @@ app.post('/api/recensione', (request, response) => {
  * @swagger
  * /api/form:
  *   post:
- *     summary: Create a request .
+ *     summary: Create a form related to the request.
  *     requestBody:
  *       required: true
  *       content:
@@ -347,12 +320,9 @@ app.post('/api/recensione', (request, response) => {
 */
 app.post('/api/form', (request, response) => {
 
-    // lettura file json e estrazione dati
     var data = fs.readFileSync('form.json');
     var myObject = JSON.parse(data);
 
-
-    // creazione nuovo elemento da inserire da Request Parameter
     let nuovoForm = {
         "NomePersonalShopper": request.body['NomePersonalShopper'],
         "Macrocategoria prodotto": request.body['Macrocategoria prodotto'],
@@ -361,15 +331,11 @@ app.post('/api/form', (request, response) => {
 
     };
 
-    //aggiunta nuovo elemento
     myObject.form.push(nuovoForm);
 
-    //aggiornamento file json con il nuovo elemento
     var newData = JSON.stringify(myObject);
     fs.writeFile('form.json', newData, err => {
-        // error checking
         if (err) throw err;
-
     });
 
     response.json("Form Inserito Correttamente: (" + myObject.form.length + ")");
