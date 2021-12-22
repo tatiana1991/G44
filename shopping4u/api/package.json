@@ -4,8 +4,7 @@
   "description": "API of Shopping 4U",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node server.js"
+    "start": "node index.js"
   },
   "author": "G44",
   "license": "MIT",
