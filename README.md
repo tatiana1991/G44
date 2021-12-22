@@ -24,7 +24,7 @@ Features
 Authors
 --------
 
-* Tatiana Zatic
+* Zatic Tatiana
 * Jie Chen
 * Manuel Pederzolli
 
