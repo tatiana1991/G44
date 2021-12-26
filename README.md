@@ -1,7 +1,7 @@
 G44/Shopping4U
 ===
 
-Web-based interface written with Node.js, Express, MongoDB
+Web-based interface written with Node.js, Express, MongoDB, Mongoose, Jest
 
 
 Inizializzare
@@ -12,6 +12,10 @@ Inizializzare
 * aprire un terminale, spostarsi nella cartella shopping4u e digitare: npm i
 * lanciare l'applicazione digitando: node server.js
 * lato frontend accedere tramite browser a localhost:3000
+
+* lanciare: node index.js
+* poi lanciare: npm test
+* per far partire lo unit testing
 
 
 Features

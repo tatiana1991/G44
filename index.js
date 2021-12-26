@@ -1,11 +1,10 @@
-const express = require("express");
-const cors = require("cors");
-const server = require("./server");
+const mongoose = require("mongoose");
+const app = require("./server");
 
-const app = express();
-
-// set port, listen for requests
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
-});
+mongoose
+  .connect("mongodb://localhost:27017/JestDB", { useNewUrlParser: true })
+  .then(() => {
+    app.listen(5000, () => {
+      console.log("Server has started!");
+    });
+  });

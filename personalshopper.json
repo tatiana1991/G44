@@ -1,0 +1,19 @@
+{
+    "personalshopper": [
+        {
+            "Name": "Monica Zamberlan",
+            "Location": "Milano",
+            "Evaluation": ""
+        },
+        {
+            "Name": "Martina Girotti",
+            "Location": "Roma",
+            "Evaluatiom": ""
+        },
+        {
+            "Name": "Giacomo Rizzi",
+            "Location": "Bologna",
+            "Evaluation": ""
+        }
+    ]
+}
